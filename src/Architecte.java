@@ -19,7 +19,7 @@ class Architecte extends Personne
         }
         else
         {
-            this.telephone = "";
+            this.telephone = "" ;
         }
         Maj_conseilRegional();
     }
@@ -28,10 +28,11 @@ class Architecte extends Personne
     {
         boolean test = false;
         int i=0;
-        if(telephone.length() <= 10) {
+        if(telephone.length() == 10)
+        {
             for(i=0;i<10;i++)
             {
-                if (!Character.isDigit(telephone.charAt(i)))
+                if (Character.isDigit(telephone.charAt(i)) == true)
                 {
                     test = true;
                 }
@@ -41,6 +42,10 @@ class Architecte extends Personne
                     break;
                 }
             }
+        }
+        else
+        {
+            System.out.println("Le format du telephone n'est pas bon");
         }
 
         return test;
@@ -59,9 +64,7 @@ class Architecte extends Personne
 
     public String toString ()
     {
-        String chaine = "";
-        chaine += this.conseilRegional + " ";
-        return chaine;
+        return "\n" + nom + " " + prenom + " " + conseilRegional + " " + telephone + " "+ adresse.toString();
     }
 
 }

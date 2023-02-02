@@ -14,6 +14,6 @@ public class Deposant extends Personne
 
     public String toString()
     {
-        return "\n"+nom+" "+prenom+" "+civilite+" "+mail+" "+;
+        return "\n"+nom+" "+prenom+" "+civilite+" "+mail+" "+adresse.toString();
     }
 }

@@ -13,6 +13,18 @@ public class Adresse
         this.cp = cp;
     }
 
+    public String toString()
+    {
+        return numero+" "+voie+" "+ville+" "+cp+" ";
+    }
+
+    public String validerChaine(String chaine,int taille)
+    {
+        if(chaine.length() > taille)
+            chaine = chaine.substring(0, taille);
+        return chaine;
+    }
+
 
 
 }
