@@ -7,10 +7,10 @@ public class Adresse
 
     public Adresse(String numero, String voie, String ville, String cp)
     {
-        this.numero = numero;
-        this.voie = voie;
-        this.ville = ville;
-        this.cp = cp;
+        this.numero = validerChaine(numero, 3);
+        this.voie = validerChaine(voie, 30);
+        this.ville = validerChaine(ville, 30);
+        this.cp = validerChaine(cp, 5);
     }
 
     public String toString()

@@ -7,8 +7,8 @@ public class Deposant extends Personne
     public Deposant(String nom,String prenom,String civilite,String mail,Adresse adresse)
     {
         super(nom,prenom);
-        this.civilite = civilite;
-        this.mail = mail;
+        this.civilite = validerChaine(civilite, 10);
+        this.mail = validerChaine(mail, 50);
         this.adresse = adresse;
     }
 
